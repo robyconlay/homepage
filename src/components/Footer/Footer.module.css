@@ -1,0 +1,21 @@
+@import "../../App.css";
+
+.footer_light {
+  background-color: var(--yellow);
+  color: black;
+}
+
+.footer_dark {
+  background-color: var(--primary-color);
+  color: var(--text-color-on-primary);
+}
+
+footer {
+
+  margin-top: 20px;
+  /* display: flex; */
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  flex-shrink: 0;
+}

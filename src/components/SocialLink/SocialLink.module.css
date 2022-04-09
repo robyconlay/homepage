@@ -1,0 +1,19 @@
+.social_link_item {
+  margin: 15px 0;
+}
+
+.link {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.link:hover {
+  background-color: rgb(72, 204, 160);
+  font-size: 1.2em;
+}
+
+.no_decoration{
+  text-decoration: none;
+  color: black;
+}
+

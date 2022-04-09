@@ -1,0 +1,25 @@
+@import '../../App.css';
+
+.theme_switcher_container {
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 100px;
+}
+
+.theme_switcher {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  border: none;
+  margin: auto;
+}
+
+
+.light_button {
+  background-color: var(--yellow);
+}
+
+.dark_button {
+  background-color: var(--primary-color);
+}

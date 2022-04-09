@@ -1,46 +1,76 @@
-html{
-  height: 100%;
+:root {
+  --background-color: white;
+  --primary-color: #253246;
+  --text-color-on-primary: white;
+  --text-color-link: aqua;
+  --active-bar-color: aqua;
+  --yellow: #FBD38D;
 }
 
-body{
+@media screen and (max-width: 600px) {
+  .content-container {
+    width: 90vw;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .content-container {
+    width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content-container {
+    width: 40vw;
+  }
+}
+
+
+html {
+  /* background-color:moccasin ; */
+}
+
+body {
   height: 100%;
+  overflow-y: scroll;
+  background-color: var(--background-color);
+}
+
+@keyframes page_load {
+  0% {
+    opacity: 0;
+    /* transform: translateY(-500px); */
+  }
+
+  100% {
+    opacity: 1;
+    /* transform: translateY(0); */
+  }
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  animation: page_load 3s ease-in;
+
+}
+
+.content-container {
   margin-left: auto;
   margin-right: auto;
-  width: 60vh;
   justify-content: center;
+  flex: 1 0 auto;
+  animation: page_load 2s;
 }
 
-header {
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: antiquewhite;
-}
 
-header div {
-  padding: 10px;
-}
-
-.no-decoration {
+.no_decoration {
   text-decoration: none;
-  color: black;
+  color: var(--text-color-on-primary);
 }
 
-.no-decoration:hover {
-  text-decoration: underline;
 
-}
-
-ul{
-}
-
-li{
-  margin: 10px 0;
-}
 .link {
   padding: 10px;
   border-radius: 10px;
@@ -52,23 +82,7 @@ li{
 
 .name {
   text-decoration: none;
-  color: black;
-}
-
-.nav-link {
-  padding: 10px;
-}
-
-.active {
-  background-color: lightblue;
-  border-radius: 10px;
-  border: 1px solid;
-  border-color: grey;
-}
-
-button {
-  background-color: white;
-  border: none;
+  /* color: black; */
 }
 
 ul {
@@ -77,16 +91,17 @@ ul {
   padding: 0;
 }
 
+.technologies li {
+  display: inline;
+  padding: 0 10px;
+}
 
-footer {
-  /* position: absolute;
-  left: 0;
-  bottom: 0; */
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  text-align: center;
-  background-color: antiquewhite;
-  padding-bottom: 20px;
+.technologies li svg {
+  width: 30px;
+  height: 30px;
+}
+
+img {
+  width: 500px;
+  height: 300px;
 }

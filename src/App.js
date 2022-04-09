@@ -1,28 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
-import Home from './routes/Home'
-import Works from './routes/Works'
+import Home from './pages/Home'
+import About from './pages/About'
+import Hobbies from './pages/Hobbies'
+import Welcome from './pages/Welcome';
 
 function App() {
+
+  const [theme, setTheme] = useState('light');
+
   return (
     <>
       <BrowserRouter>
-        <Header />
         <div className='container'>
+          <Header theme={theme} setTheme={setTheme} />
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/works' element={<Works />} />
+            <Route path='/' element={<Welcome />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/hobbies' element={<Hobbies />} />
           </Routes>
+          <Footer theme={theme} />
         </div>
-        <Footer />
       </BrowserRouter>
     </>
   );
