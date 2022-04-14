@@ -1,0 +1,21 @@
+.technologies {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.technologies li {
+  display: inline;
+  padding: 0 10px;
+}
+
+.technologies li svg {
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s;
+}
+
+.technologies li svg:hover {
+  transform: scale(1.6);
+
+}

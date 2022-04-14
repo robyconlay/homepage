@@ -14,12 +14,3 @@
   border: none;
   margin: auto;
 }
-
-
-.light_button {
-  background-color: var(--yellow);
-}
-
-.dark_button {
-  background-color: var(--primary-color);
-}

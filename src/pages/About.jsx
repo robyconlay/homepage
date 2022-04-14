@@ -1,7 +1,9 @@
 import React from "react"
 
-import { SiCplusplus, SiMysql, SiPhp, SiJavascript, SiJava, SiPython, SiCss3, SiHtml5 } from 'react-icons/si'
+import { SiCplusplus, SiMysql, SiPhp, SiJavascript, SiJava, SiPython, SiCss3, SiHtml5, SiAndroidstudio } from 'react-icons/si'
 import { FaShopware, FaWordpress, FaNodeJs, FaGitAlt, FaFigma } from 'react-icons/fa'
+
+import styles from './About.module.css'
 
 export default function About() {
   const languages = [
@@ -21,12 +23,13 @@ export default function About() {
   ];
   const CMS = [
     { text: 'Wordpress', icon: <FaWordpress title='Wordpress' /> },
-    { test: 'Shopware', icon: <FaShopware title="Shopware" /> }
+    { text: 'Shopware', icon: <FaShopware title="Shopware" /> }
   ];
   const tools = [
     { text: 'NodeJS', icon: <FaNodeJs title='NodeJS' /> },
-    { test: 'Git', icon: <FaGitAlt title="Git" /> },
-    { test: 'Figma', icon: <FaFigma title='Figma' /> }
+    { text: 'Git', icon: <FaGitAlt title="Git" /> },
+    { text: 'Figma', icon: <FaFigma title='Figma' /> },
+    { text: 'Android Studio', icon: <SiAndroidstudio title='Android Studio' /> },
   ];
 
   return (
@@ -37,26 +40,26 @@ export default function About() {
           <h4>
             Languages
           </h4>
-          <ul className="technologies">
+          <ul className={styles.technologies}>
             {languages.map(item => <li key={item.text}>{item.icon}</li>)}
           </ul>
 
           <h4>
             Frameworks
           </h4>
-          <ul>
+          <ul className={styles.technologies}>
             {frameworks.map(item => <li key={item.text}>{item.text}</li>)}
           </ul>
           <h4>
             Tools
           </h4>
-          <ul className="technologies">
+          <ul className={styles.technologies}>
             {tools.map(item => <li key={item.text}>{item.icon}</li>)}
           </ul>
           <h4>
             CMS
           </h4>
-          <ul className="technologies">
+          <ul className={styles.technologies}>
             {CMS.map(item => <li key={item.text}>{item.icon}</li>)}
           </ul>
         </section>
@@ -64,7 +67,7 @@ export default function About() {
         <section>
           <h3>Projects</h3>
           <p>
-            Takuya is a freelance and a full-stack developer based in Osaka with a passion for building digital services/stuff he wants. He has a knack for all things launching products, from planning and designing all the way to solving real-life problems with code. When not online, he loves hanging out with his camera. Currently, he is living off of his own product called
+            Lorem ipsum dolor sit ament.
           </p>
         </section>
       </div>

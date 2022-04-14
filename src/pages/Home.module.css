@@ -4,10 +4,34 @@ section p {
   text-align: justify;
 }
 
-.home_title{
-
-}
+.home_title {}
 
 .home_title svg {
   height: 4rem;
+}
+
+.title_avatar_div {
+  display: flex;
+  flex-direction: row;
+}
+
+.avatar_container {
+  width: 100px;
+  height: 100px;
+  margin-left: 50px;
+  /* vertical-align: middle; */
+}
+
+.avatar {}
+
+.bio_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social_link_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }

@@ -12,26 +12,27 @@ import About from './pages/About'
 import Hobbies from './pages/Hobbies'
 import Welcome from './pages/Welcome';
 
-function App() {
+import { ThemeProvider } from './ThemeContext';
 
-  const [theme, setTheme] = useState('light');
+export default function App() {
+  
 
   return (
-    <>
+    <ThemeProvider>
       <BrowserRouter>
-        <div className='container'>
-          <Header theme={theme} setTheme={setTheme} />
+        <div className='container' >
+          <Header />
           <Routes>
             <Route path='/' element={<Welcome />} />
             <Route path='/home' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/hobbies' element={<Hobbies />} />
           </Routes>
-          <Footer theme={theme} />
+          <Footer />
         </div>
       </BrowserRouter>
-    </>
+    </ThemeProvider>
   );
 }
 
-export default App;
+

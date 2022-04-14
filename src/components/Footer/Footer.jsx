@@ -1,9 +1,11 @@
 import styles from './Footer.module.css'
 
+import { useTheme } from '../../ThemeContext';
+
 export default function Footer(props) {
-  const { theme } = props;
+  const theme = useTheme();
   return (
-    <footer className={theme === 'light' ? styles.footer_light : styles.footer_dark}>
+    <footer style={{ backgroundColor: theme.footer.backgroundColor, color: theme.footer.color }}>
       <p>
         &copy; {new Date().getFullYear()} Roberto Mazzalai. All Rights Reserved.
       </p>

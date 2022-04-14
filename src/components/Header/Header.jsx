@@ -1,52 +1,37 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
+import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
+import NavLinkContainer from '../NavLinkContainer/NavLinkContainer';
+
+import { useTheme } from '../../ThemeContext';
+
 import { FaGithub } from 'react-icons/fa'
 import { BiLinkExternal } from 'react-icons/bi'
 
-import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
-
 import styles from './Header.module.css'
 
-export default function Header(props) {
-
-	const { theme, setTheme } = props;
+export default function Header() {
+	const theme = useTheme();
 
 	return (
-		<header className={theme === 'light' ? styles.header_light : styles.header_dark}>
-			<div className={styles.nav_link_container}>
-				<NavLink className={`${styles.nav_link}  ${styles.no_decoration} ${styles.welcome}`} to='/'>
-					Roberto Mazzalai
-				</NavLink>
-			</div>
+		<header style={{ backgroundColor: theme.header.backgroundColor }}>
 			<nav>
-				<div className={styles.nav_link_container}>
-					<NavLink className={`${styles.nav_link}  ${styles.no_decoration}`} activeClassName={styles.active} to='/home'>
-						Home
-					</NavLink>
-					{useLocation().pathname === '/home' && <span className={styles.active_bar}></span>}
-				</div>
-				<div className={styles.nav_link_container}>
-					<NavLink className={`${styles.nav_link}  ${styles.no_decoration}`} activeClassName={`${styles.active}`} to='/about'>
-						About
-					</NavLink>
-					{useLocation().pathname === '/about' && <span className={styles.active_bar}></span>}
-				</div>
-				<div className={styles.nav_link_container}>
-					<NavLink className={`${styles.nav_link}  ${styles.no_decoration}`} activeClassName={`${styles.active}`} to='/hobbies'>
-						Hobbies
-					</NavLink>
-					{useLocation().pathname === '/hobbies' && <span className={styles.active_bar}></span>}
-				</div>
-				<div className={styles.nav_link_container}>
+				<NavLinkContainer name='Roberto Mazzalai' path='/' />
+				<NavLinkContainer name='Home' path='/home' />
+				<NavLinkContainer name='About' path='/about' />
+				<NavLinkContainer name='Hobbies' path='/hobbies' />
+
+				<div className={styles.nav_link_container} style={{ color: theme.header.color }} >
 					{/* <FaGithub /> */}
-					<a href="https://github.com/robyconlay/homepage" target='_blank' className={`${styles.nav_link}  ${styles.no_decoration}`}>
+					<a href="https://github.com/robyconlay/homepage" target='_blank' className={`${styles.nav_link}  ${styles.no_decoration}`} style={{ color: theme.header.color }} >
 						Source
 					</a>
-					<BiLinkExternal style={{ color: 'white' }} />
+					<BiLinkExternal style={{ color: theme.header.color }} />
 				</div>
+				
 			</nav>
-			<ThemeSwitcher theme={theme} setTheme={setTheme} />
+			<ThemeSwitcher />
 		</header>
 	)
 }

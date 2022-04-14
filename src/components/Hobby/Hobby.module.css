@@ -1,0 +1,9 @@
+.hobby_container {}
+
+.hobby_container img {
+  transition: all 0.2s;
+}
+
+.hobby_container img:hover {
+  transform: scale(1.4);
+}

@@ -1,6 +1,6 @@
 .welcome_container {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .welcome_image {

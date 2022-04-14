@@ -1,12 +1,3 @@
-:root {
-  --background-color: white;
-  --primary-color: #253246;
-  --text-color-on-primary: white;
-  --text-color-link: aqua;
-  --active-bar-color: aqua;
-  --yellow: #FBD38D;
-}
-
 @media screen and (max-width: 600px) {
   .content-container {
     width: 90vw;
@@ -33,7 +24,6 @@ html {
 body {
   height: 100%;
   overflow-y: scroll;
-  background-color: var(--background-color);
 }
 
 @keyframes page_load {
@@ -53,7 +43,6 @@ body {
   flex-direction: column;
   height: 100vh;
   animation: page_load 3s ease-in;
-
 }
 
 .content-container {
@@ -70,7 +59,7 @@ body {
   color: var(--text-color-on-primary);
 }
 
-
+/* 
 .link {
   padding: 10px;
   border-radius: 10px;
@@ -78,27 +67,11 @@ body {
 
 .link:hover {
   background-color: aquamarine;
-}
+} */
 
 .name {
   text-decoration: none;
   /* color: black; */
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.technologies li {
-  display: inline;
-  padding: 0 10px;
-}
-
-.technologies li svg {
-  width: 30px;
-  height: 30px;
 }
 
 img {

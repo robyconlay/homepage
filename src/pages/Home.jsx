@@ -1,56 +1,59 @@
 import React from "react";
 import SocialLinkItem from "../components/SocialLink/SocialLink";
+import Bio from "../components/Bio/Bio";
 
 import { FaGithub, FaInstagram } from 'react-icons/fa';
 import { SiMyanimelist } from 'react-icons/si';
 import { MdOutlineEmail } from 'react-icons/md'
 import { AiOutlineFilePdf } from 'react-icons/ai'
-import Bio from "../components/Bio/Bio";
 
 import styles from './Home.module.css'
 
 import Avatar from '../Avatar'
-import { createAvatar } from '@dicebear/avatars';
-import * as style from '@dicebear/avatars-male-sprites';
+// import { createAvatar } from '@dicebear/avatars';
+// import * as style from '@dicebear/avatars-male-sprites';
+
+
 
 export default function Home() {
 
-
-  let avatar = createAvatar(style, {
-    seed: 'robyconlay',
-    // ... and other options
-  });
-
-  // console.log(avatar)
+  // let avatar = createAvatar(style, {
+  //   seed: 'robyconlay',
+  //   // ... and other options
+  // });
 
   return (
-    <div className='content-container'>
-      <div className={styles.home_title}>
+    // <div style={{ backgroundColor: theme.main.backgroundColor }}>
+    <div className='content-container' >
+      <div className={styles.title_avatar_div}>
+        <div className={styles.home_title}>
 
-        <h2 className={styles.title}>
-          Roberto Mazzalai
-        </h2>
-        <div className={styles.subtitle}>
-          Graduate in Computer Science
+          <h2 className={styles.title}>
+            Roberto Mazzalai
+          </h2>
+          <div className={styles.subtitle}>
+            Graduate in Computer Science
+          </div>
+          {/* <img src={avatar} className={styles.avatar} /> */}
         </div>
-        {/* <img src={avatar} className={styles.avatar} /> */}
-        <Avatar className={styles.avatar} />
+        <div className={styles.avatar_container}>
+          <Avatar className={styles.avatar} />
+        </div>
       </div>
 
       <section>
         <h3>Who is he</h3>
         <p>
-          Roberto is a graduate of the University of Trento in the course of Computer Science.
+          Roberto is a graduate of the University of Trento in the course of Computer Science. <br />
 
-
-          Takuya is a freelance and a full-stack developer based in Osaka with a passion for building digital services/stuff he wants. He has a knack for all things launching products, from planning and designing all the way to solving real-life problems with code. When not online, he loves hanging out with his camera. Currently, he is living off of his own product called
+          Roberto is a passionate developer based in Trento with a passion for building digital services/stuff he wants and discovering new technologies. He has a knack for all things launching products, from planning and designing all the way to solving real-life problems with code. When not online, he loves learning new moves in parkour. Currently, he is unemployed.
         </p>
       </section>
 
 
       <section>
         <h3>Bio</h3>
-        <ul>
+        <ul className={styles.bio_list}>
           <Bio year='1999' text='Born in Trento, Italy.' />
           <Bio year='2021' text='Completed a stage at 426 agency.' />
           <Bio year='2022' text='Degree in Computer Science in the University of Trento' />
@@ -68,5 +71,6 @@ export default function Home() {
         </ul>
       </section>
     </div>
+    //  </div> 
   )
 }
