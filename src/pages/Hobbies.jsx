@@ -1,8 +1,6 @@
-import slacklineImage from '../slackline.jpg'
-import sideflipImage from '../sideflip.jpg'
-import Hobby from '../components/Hobby/Hobby'
-
-import styles from './Hobbies.module.css'
+import slacklineImage from '../images/slackline.jpg'
+import sideflipImage from '../images/sideflip.jpg'
+import Hobby from '../components/Hobby'
 
 export default function Hobbies() {
 

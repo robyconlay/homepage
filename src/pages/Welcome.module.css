@@ -1,6 +1,22 @@
+@font-face {
+  font-family: Source Code Pro;
+  src: url('../fonts/Source_Code_Pro/static/SourceCodePro-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Source Sans Pro;
+  src: url('../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .welcome_container {
   position: relative;
   overflow: hidden;
+  margin: auto;
+  text-align: center;
 }
 
 .welcome_image {
@@ -16,4 +32,48 @@
   color: white;
   font-size: 32px;
   font-style: italic;
+}
+
+h1 {
+  font-family: "Source Code Pro", monospace;
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  width: max-content;
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+h1::before {
+  background: var(--bg-color);
+  animation: slideIn 5s forwards;
+}
+
+.subtitle {
+  opacity: 70%;
+  font-size: 2em;
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
+  animation: fadeInUp 2s ease 5.5s forwards;
+  opacity: 0;
+  transform: translateY(3rem);
+}
+
+@keyframes slideIn {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

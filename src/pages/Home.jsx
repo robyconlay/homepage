@@ -1,15 +1,15 @@
 import React from "react";
-import SocialLinkItem from "../components/SocialLink/SocialLink";
-import Bio from "../components/Bio/Bio";
+import SocialLinkItem from "../components/SocialLink";
+import Bio from "../components/Bio";
 
-import { FaGithub, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { SiMyanimelist } from 'react-icons/si';
 import { MdOutlineEmail } from 'react-icons/md'
 import { AiOutlineFilePdf } from 'react-icons/ai'
 
 import styles from './Home.module.css'
 
-import Avatar from '../Avatar'
+import Avatar from '../svg/Avatar'
 // import { createAvatar } from '@dicebear/avatars';
 // import * as style from '@dicebear/avatars-male-sprites';
 
@@ -64,6 +64,7 @@ export default function Home() {
         <h3>Links</h3>
         <ul className={styles.social_link_list}>
           <SocialLinkItem url='https://github.com/robyconlay' icon={<FaGithub />} displayText='@robyconlay' />
+          <SocialLinkItem url='https://www.linkedin.com/in/roberto-mazzalai-306a62237/' icon={<FaLinkedin />} displayText='@Roberto Mazzalai' />
           <SocialLinkItem url='' icon={<FaInstagram />} displayText='@roby_con_la_y (private)' />
           <SocialLinkItem url='https://myanimelist.net/profile/robyconlay' icon={<SiMyanimelist />} displayText='@robyconlay' />
           <SocialLinkItem url='mazzalairob@gmail.com' icon={<MdOutlineEmail />} displayText='mazzalairob@gmail.com' /> {/* not a link */}

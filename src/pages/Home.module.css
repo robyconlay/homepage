@@ -19,7 +19,11 @@ section p {
   width: 100px;
   height: 100px;
   margin-left: 50px;
-  /* vertical-align: middle; */
+  transition: all 0.2s;
+}
+
+.avatar_container:hover {
+  transform: scale(1.4);
 }
 
 .avatar {}

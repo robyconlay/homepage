@@ -4,6 +4,7 @@ import { SiCplusplus, SiMysql, SiPhp, SiJavascript, SiJava, SiPython, SiCss3, Si
 import { FaShopware, FaWordpress, FaNodeJs, FaGitAlt, FaFigma } from 'react-icons/fa'
 
 import styles from './About.module.css'
+import styled from "styled-components";
 
 export default function About() {
   const languages = [
@@ -40,28 +41,28 @@ export default function About() {
           <h4>
             Languages
           </h4>
-          <ul className={styles.technologies}>
-            {languages.map(item => <li key={item.text}>{item.icon}</li>)}
-          </ul>
+          <List>
+            {languages.map(item => <Item className={styles.item} key={item.text}>{item.icon}</Item>)}
+          </List>
 
           <h4>
             Frameworks
           </h4>
-          <ul className={styles.technologies}>
-            {frameworks.map(item => <li key={item.text}>{item.text}</li>)}
-          </ul>
+          <List>
+            {frameworks.map(item => <Item className={styles.item} key={item.text}>{item.text}</Item>)}
+          </List>
           <h4>
             Tools
           </h4>
-          <ul className={styles.technologies}>
-            {tools.map(item => <li key={item.text}>{item.icon}</li>)}
-          </ul>
+          <List>
+            {tools.map(item => <Item className={styles.item} key={item.text}>{item.icon}</Item>)}
+          </List>
           <h4>
             CMS
           </h4>
-          <ul className={styles.technologies}>
-            {CMS.map(item => <li key={item.text}>{item.icon}</li>)}
-          </ul>
+          <List>
+            {CMS.map(item => <Item className={styles.item} key={item.text}>{item.icon}</Item>)}
+          </List>
         </section>
 
         <section>
@@ -74,3 +75,13 @@ export default function About() {
     </div>
   )
 }
+
+const List = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+`
+const Item = styled.li`
+  display: inline;
+  padding: 0 10px;
+`

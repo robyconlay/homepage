@@ -19,11 +19,14 @@
 
 html {
   /* background-color:moccasin ; */
+  
 }
 
 body {
   height: 100%;
   overflow-y: scroll;
+  transition-property: background-color;
+  transition-duration: 0.2s;
 }
 
 @keyframes page_load {
